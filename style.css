@@ -397,8 +397,9 @@ h1, h2, h3 {
 }
 
 .table-card {
-    overflow: hidden;
+    overflow-x: auto;
     padding: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modern-table {
@@ -616,11 +617,35 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
-    .gradient-text { font-size: 3rem; }
+    body { font-size: 16px; }
+    .gradient-text { font-size: 2.5rem; }
+    .subtitle { font-size: 1.2rem; }
+    .section-title { font-size: 2.2rem; }
+    
     .timeline-header { flex-direction: column; gap: 30px; }
     .logo-wrapper { flex-direction: column; gap: 20px; }
     .logo-divider { display: none; }
-    .breakdown-summary { flex-direction: column; gap: 30px; }
+    
+    .summary-banner {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .summary-value {
+        font-size: 2rem;
+    }
+    
+    .pricing-card h3 { font-size: 1.8rem; }
+    .plan-description { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    .gradient-text { font-size: 2rem; }
+    .section-title { font-size: 1.8rem; }
+    .summary-value { font-size: 1.6rem; }
+    .modern-table { font-size: 0.9rem; }
+    .modern-table th, .modern-table td { padding: 12px 10px; }
 }
 
 /* Number Counter Animation Classes */
